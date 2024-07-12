@@ -63,10 +63,10 @@ export class AppComponent {
     { id: 49, title: 'Card49', logo: 'assets/goose.png', description: 'This is a Goose', group: 'Birds' },
     { id: 50, title: 'Card50', logo: 'assets/raven.png', description: 'This is a Raven', group: 'Birds' }
   ];
-  cards: { id: number, title: string, logo: string, description: string, group: string }[] = []; // Inicialización correcta
+  cards: { id: number, title: string, logo: string, description: string, group: string }[] = [];
 
   filterByGroup() {
-    const group = prompt('Enter the group to filter by (e.g., Birds, Fishes, Panthers, Reptiles, Insects, Felines, Canines, Primates, Amphibians, Ursids, Lagomorphs, Cetaceans, Marsupials, Ungulates, Xenarthrans, Extinct):');
+    const group = prompt('Enter the group to filter by (e.g., Insects, Fishes, Amphibians, Reptiles, Birds, Cetaceans, Ungulates, Marsupials, Canines, Felines, Panthers, Ursids, Ailuridae, Mustelidae, Procyonidae, Extinct):');
     console.log(`Group entered: ${group}`);
     if (group) {
       const filteredCards = this.allCards.filter(item => item.group.toLowerCase() === group.trim().toLowerCase());
